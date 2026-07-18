@@ -1,1 +1,184 @@
-body{font-family:Arial,sans-serif;margin:0}header{background:#0B1F3A;color:#fff;padding:40px;text-align:center}nav{padding:12px;background:#eee}nav a{margin:0 8px;text-decoration:none}main{padding:24px}
+/* ===========================
+   GOOGLE FONTS & RESET
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f5f7fa;
+  color: #222;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 8%;
+
+  background: #ffffff;
+
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 999;
+}
+
+.logo h2 {
+  font-family: "Poppins", sans-serif;
+
+  color: #003366;
+
+  font-size: 28px;
+
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+
+  gap: 30px;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+
+  color: #222;
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 500;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+/* ===========================
+   HERO
+===========================*/
+
+.hero {
+  min-height: 90vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 80px 8%;
+
+  background: #f5f7fa;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-left h5 {
+  color: #0077cc;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 15px;
+}
+
+.hero-left h1 {
+  font-size: 60px;
+
+  color: #003366;
+
+  font-family: "Poppins", sans-serif;
+
+  margin-bottom: 25px;
+}
+
+.hero-left p {
+  font-size: 19px;
+
+  line-height: 1.8;
+
+  color: #555;
+
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+
+  gap: 20px;
+}
+
+.btn {
+  background: #0077cc;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 15px 35px;
+
+  border-radius: 40px;
+}
+
+.btn-outline {
+  border: 2px solid #0077cc;
+
+  color: #0077cc;
+
+  text-decoration: none;
+
+  padding: 15px 35px;
+
+  border-radius: 40px;
+}
+
+.hero-right {
+  width: 45%;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.hero-image {
+  width: 450px;
+
+  height: 450px;
+
+  background: #d9e8f7;
+
+  border-radius: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 28px;
+
+  color: #003366;
+
+  font-weight: bold;
+}
