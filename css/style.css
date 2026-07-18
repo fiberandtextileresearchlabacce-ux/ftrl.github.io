@@ -1,28 +1,15 @@
-/* ==========================================
+/* ==================================================
    FIBER & TEXTILE RESEARCH LABORATORY
-   STYLE.CSS
-========================================== */
+   Fresh style.css
+================================================== */
 
-/* ========== GOOGLE FONTS & RESET ========== */
+/* ================= RESET ================= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Inter", sans-serif;
-  background: #f8fafc;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* ========== VARIABLES ========== */
 
 :root {
   --primary: #003366;
@@ -31,16 +18,32 @@ body {
 
   --white: #ffffff;
   --light: #f5f7fa;
-  --dark: #222;
+
+  --dark: #222222;
+  --text: #555555;
 
   --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* ========== NAVBAR ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  background: var(--light);
+
+  color: var(--dark);
+
+  line-height: 1.7;
+}
+
+/* ==================================================
+   NAVBAR
+================================================== */
 
 .navbar {
-  width: 100%;
-
   display: flex;
 
   justify-content: space-between;
@@ -60,29 +63,49 @@ body {
   z-index: 1000;
 }
 
-.lab-logo img {
-  height: 72px;
+/* Brand */
 
-  display: block;
-}
-
-.uni-logo img {
-  height: 60px;
-
-  display: block;
-}
-
-.nav-links {
+.lab-brand {
   display: flex;
 
   align-items: center;
 
-  gap: 30px;
-
-  list-style: none;
+  gap: 15px;
 }
 
-.nav-links li {
+.lab-brand img {
+  width: 70px;
+
+  height: 70px;
+
+  object-fit: contain;
+}
+
+.lab-title h2 {
+  font-family: "Poppins", sans-serif;
+
+  color: var(--primary);
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+.lab-title p {
+  color: #666;
+
+  font-size: 13px;
+
+  margin-top: 5px;
+}
+
+/* Navigation */
+
+.nav-links {
+  display: flex;
+
+  gap: 30px;
+
   list-style: none;
 }
 
@@ -102,7 +125,19 @@ body {
   color: var(--secondary);
 }
 
-/* ========== HERO SECTION ========== */
+/* University logo */
+
+.uni-logo img {
+  width: 60px;
+
+  height: 60px;
+
+  object-fit: contain;
+}
+
+/* ==================================================
+   HERO SECTION
+================================================== */
 
 .hero {
   min-height: 90vh;
@@ -127,17 +162,17 @@ body {
 
   letter-spacing: 3px;
 
-  margin-bottom: 15px;
-
   font-weight: 600;
+
+  margin-bottom: 18px;
 }
 
 .hero-left h1 {
   font-family: "Poppins", sans-serif;
 
-  font-size: 58px;
-
   color: var(--primary);
+
+  font-size: 58px;
 
   line-height: 1.15;
 
@@ -145,11 +180,9 @@ body {
 }
 
 .hero-left p {
+  color: var(--text);
+
   font-size: 18px;
-
-  color: #555;
-
-  line-height: 1.9;
 
   margin-bottom: 35px;
 }
@@ -164,11 +197,11 @@ body {
 
 .btn,
 .btn-outline {
-  text-decoration: none;
-
-  padding: 14px 34px;
+  padding: 15px 34px;
 
   border-radius: 40px;
+
+  text-decoration: none;
 
   font-family: "Poppins", sans-serif;
 
@@ -199,7 +232,7 @@ body {
   color: white;
 }
 
-/* Right Image */
+/* Hero image */
 
 .hero-right {
   width: 42%;
@@ -214,9 +247,9 @@ body {
 
   height: 430px;
 
-  border-radius: 20px;
-
   background: #dcecff;
+
+  border-radius: 20px;
 
   display: flex;
 
@@ -224,18 +257,18 @@ body {
 
   align-items: center;
 
-  color: var(--primary);
+  font-size: 26px;
 
   font-family: "Poppins", sans-serif;
 
-  font-size: 26px;
-
-  font-weight: 600;
+  color: var(--primary);
 
   box-shadow: var(--shadow);
 }
 
-/* ========== RESEARCH SECTION ========== */
+/* ==================================================
+   RESEARCH SECTION
+================================================== */
 
 .research {
   padding: 100px 8%;
@@ -248,25 +281,21 @@ body {
 
   font-size: 42px;
 
-  font-family: "Poppins", sans-serif;
-
   color: var(--primary);
 
-  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+
+  margin-bottom: 20px;
 }
 
 .section-title {
   max-width: 760px;
 
-  margin: auto;
+  margin: 0 auto 60px;
 
   text-align: center;
 
   color: #666;
-
-  line-height: 1.8;
-
-  margin-bottom: 60px;
 }
 
 .research-grid {
@@ -280,9 +309,9 @@ body {
 .research-card {
   background: var(--light);
 
-  border-radius: 16px;
+  padding: 35px;
 
-  padding: 40px;
+  border-radius: 18px;
 
   box-shadow: var(--shadow);
 
@@ -302,12 +331,12 @@ body {
 }
 
 .research-card p {
-  color: #555;
-
-  line-height: 1.8;
+  color: var(--text);
 }
 
-/* ========== FOOTER ========== */
+/* ==================================================
+   FOOTER
+================================================== */
 
 footer {
   background: var(--primary);
@@ -317,17 +346,21 @@ footer {
   text-align: center;
 
   padding: 25px;
-
-  font-size: 15px;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ==================================================
+   RESPONSIVE DESIGN
+================================================== */
 
 @media (max-width: 992px) {
   .navbar {
     flex-direction: column;
 
     gap: 20px;
+  }
+
+  .lab-brand {
+    justify-content: center;
   }
 
   .nav-links {
@@ -362,15 +395,29 @@ footer {
   .hero-left h1 {
     font-size: 44px;
   }
-
-  .hero-image {
-    width: 320px;
-
-    height: 320px;
-  }
 }
 
 @media (max-width: 576px) {
+  .lab-brand img {
+    width: 55px;
+
+    height: 55px;
+  }
+
+  .lab-title h2 {
+    font-size: 22px;
+  }
+
+  .lab-title p {
+    font-size: 11px;
+  }
+
+  .uni-logo img {
+    width: 48px;
+
+    height: 48px;
+  }
+
   .hero-left h1 {
     font-size: 34px;
   }
@@ -379,18 +426,13 @@ footer {
     font-size: 16px;
   }
 
-  .btn,
-  .btn-outline {
-    padding: 12px 24px;
-
-    font-size: 14px;
+  .hero-buttons {
+    flex-direction: column;
   }
 
-  .lab-logo img {
-    height: 58px;
-  }
+  .hero-image {
+    width: 300px;
 
-  .uni-logo img {
-    height: 48px;
+    height: 300px;
   }
 }
