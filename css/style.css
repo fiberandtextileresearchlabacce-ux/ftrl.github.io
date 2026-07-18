@@ -1,6 +1,9 @@
-/* ===========================
-   GOOGLE FONTS & RESET
-=========================== */
+/* ==========================================
+   FIBER & TEXTILE RESEARCH LABORATORY
+   STYLE.CSS
+========================================== */
+
+/* ========== GOOGLE FONTS & RESET ========== */
 
 * {
   margin: 0;
@@ -8,59 +11,85 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
-  background: #f5f7fa;
-  color: #222;
+  background: #f8fafc;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
+/* ========== VARIABLES ========== */
+
+:root {
+  --primary: #003366;
+  --secondary: #0077cc;
+  --accent: #00a8ff;
+
+  --white: #ffffff;
+  --light: #f5f7fa;
+  --dark: #222;
+
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== NAVBAR ========== */
 
 .navbar {
+  width: 100%;
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 
-  padding: 18px 8%;
+  padding: 15px 6%;
 
-  background: #ffffff;
+  background: var(--white);
 
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow);
 
   position: sticky;
+
   top: 0;
 
-  z-index: 999;
+  z-index: 1000;
 }
 
-.logo h2 {
-  font-family: "Poppins", sans-serif;
+.lab-logo img {
+  height: 72px;
 
-  color: #003366;
+  display: block;
+}
 
-  font-size: 28px;
+.uni-logo img {
+  height: 60px;
 
-  font-weight: 700;
+  display: block;
 }
 
 .nav-links {
-  list-style: none;
-
   display: flex;
 
+  align-items: center;
+
   gap: 30px;
+
+  list-style: none;
 }
 
 .nav-links li {
-  display: inline-block;
+  list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
 
-  color: #222;
+  color: var(--dark);
 
   font-family: "Poppins", sans-serif;
 
@@ -70,58 +99,62 @@ body {
 }
 
 .nav-links a:hover {
-  color: #0077cc;
+  color: var(--secondary);
 }
 
-/* ===========================
-   HERO
-===========================*/
+/* ========== HERO SECTION ========== */
 
 .hero {
   min-height: 90vh;
 
   display: flex;
 
-  align-items: center;
-
   justify-content: space-between;
+
+  align-items: center;
 
   padding: 80px 8%;
 
-  background: #f5f7fa;
+  background: linear-gradient(135deg, #f8fbff, #eef6ff);
 }
 
 .hero-left {
-  width: 50%;
+  width: 52%;
 }
 
 .hero-left h5 {
-  color: #0077cc;
+  color: var(--secondary);
 
   letter-spacing: 3px;
 
   margin-bottom: 15px;
+
+  font-weight: 600;
 }
 
 .hero-left h1 {
-  font-size: 60px;
-
-  color: #003366;
-
   font-family: "Poppins", sans-serif;
+
+  font-size: 58px;
+
+  color: var(--primary);
+
+  line-height: 1.15;
 
   margin-bottom: 25px;
 }
 
 .hero-left p {
-  font-size: 19px;
-
-  line-height: 1.8;
+  font-size: 18px;
 
   color: #555;
 
-  margin-bottom: 40px;
+  line-height: 1.9;
+
+  margin-bottom: 35px;
 }
+
+/* Buttons */
 
 .hero-buttons {
   display: flex;
@@ -129,32 +162,47 @@ body {
   gap: 20px;
 }
 
-.btn {
-  background: #0077cc;
-
-  color: white;
-
+.btn,
+.btn-outline {
   text-decoration: none;
 
-  padding: 15px 35px;
+  padding: 14px 34px;
 
   border-radius: 40px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn {
+  background: var(--secondary);
+
+  color: white;
+}
+
+.btn:hover {
+  background: var(--primary);
 }
 
 .btn-outline {
-  border: 2px solid #0077cc;
+  border: 2px solid var(--secondary);
 
-  color: #0077cc;
-
-  text-decoration: none;
-
-  padding: 15px 35px;
-
-  border-radius: 40px;
+  color: var(--secondary);
 }
 
+.btn-outline:hover {
+  background: var(--secondary);
+
+  color: white;
+}
+
+/* Right Image */
+
 .hero-right {
-  width: 45%;
+  width: 42%;
 
   display: flex;
 
@@ -162,13 +210,13 @@ body {
 }
 
 .hero-image {
-  width: 450px;
+  width: 430px;
 
-  height: 450px;
-
-  background: #d9e8f7;
+  height: 430px;
 
   border-radius: 20px;
+
+  background: #dcecff;
 
   display: flex;
 
@@ -176,9 +224,173 @@ body {
 
   align-items: center;
 
-  font-size: 28px;
+  color: var(--primary);
 
-  color: #003366;
+  font-family: "Poppins", sans-serif;
 
-  font-weight: bold;
+  font-size: 26px;
+
+  font-weight: 600;
+
+  box-shadow: var(--shadow);
+}
+
+/* ========== RESEARCH SECTION ========== */
+
+.research {
+  padding: 100px 8%;
+
+  background: white;
+}
+
+.research h2 {
+  text-align: center;
+
+  font-size: 42px;
+
+  font-family: "Poppins", sans-serif;
+
+  color: var(--primary);
+
+  margin-bottom: 15px;
+}
+
+.section-title {
+  max-width: 760px;
+
+  margin: auto;
+
+  text-align: center;
+
+  color: #666;
+
+  line-height: 1.8;
+
+  margin-bottom: 60px;
+}
+
+.research-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.research-card {
+  background: var(--light);
+
+  border-radius: 16px;
+
+  padding: 40px;
+
+  box-shadow: var(--shadow);
+
+  transition: 0.35s;
+}
+
+.research-card:hover {
+  transform: translateY(-10px);
+}
+
+.research-card h3 {
+  color: var(--primary);
+
+  margin-bottom: 15px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.research-card p {
+  color: #555;
+
+  line-height: 1.8;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+  background: var(--primary);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 25px;
+
+  font-size: 15px;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 18px;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 50px;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left h1 {
+    font-size: 44px;
+  }
+
+  .hero-image {
+    width: 320px;
+
+    height: 320px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-left h1 {
+    font-size: 34px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .btn,
+  .btn-outline {
+    padding: 12px 24px;
+
+    font-size: 14px;
+  }
+
+  .lab-logo img {
+    height: 58px;
+  }
+
+  .uni-logo img {
+    height: 48px;
+  }
 }
